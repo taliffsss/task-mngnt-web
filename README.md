@@ -1,4 +1,5 @@
 
+
 # Task Management System
 
 This project is a Task Management System, designed to help users manage their tasks effectively and efficiently. This document will guide you on setting up the project and getting it running on your local machine.
@@ -74,6 +75,22 @@ bashCopy code
 `yarn start` 
 
 Now you should be able to access the application on your local host.
+
+Docker setup usage:
+Run `sh docker.sh [branch alias] up`
+ - up
+ - build
+ - down
+ - ps
+ - exec
+
+Branching:
+ - main and master 
+	 - prod
+ - dev
+	 - dev
+ - Staging
+	 - staging 
 
 ## Authentication
 
