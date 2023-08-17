@@ -12,7 +12,7 @@ services:
     image: web-${REACT_APP_ENV}
     container_name: web_${REACT_APP_ENV}
     ports:
-      - ${REACT_APP_PORT}:3000
+      - ${REACT_APP_PORT}:${REACT_APP_PORT}
     env_file:
       - .env
     volumes:
