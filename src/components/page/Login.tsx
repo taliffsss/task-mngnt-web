@@ -54,7 +54,13 @@ const Login: React.FC = () => {
         setLoading(false);
       })
       .catch((err) => {
-        setWrongCredential(err?.response?.data?.result?.message)
+        const msg = err?.response?.data?.result?.message;
+        if (typeof msg === 'object' && !Array.isArray(msg) && msg !== null) {
+          setFieldError("email", err?.response?.data?.result?.message?.email);
+          setFieldError("password", err?.response?.data?.result?.message?.password);
+        } else {
+          setWrongCredential(err?.response?.data?.result?.message)
+        }
         setLoading(false);
         setSubmitting(false);
       });
