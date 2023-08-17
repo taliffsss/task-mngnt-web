@@ -21,7 +21,7 @@ else
 fi
 
 # validate env
-if [[ ($branch == "develop" && $1 == "dev") || ($branch == "staging" && $1 == "staging") || ($branch == "main" && $1 == "prod") ]]; then
+if [[ ($branch == "develop" && $1 == "dev") || ($branch == "staging" && $1 == "staging") || (($branch == "master" || $branch == "main") && $1 == "prod") ]]; then
   export env=$1
 else
   echo "${RED}Invalid command $1${NC}";
@@ -29,7 +29,7 @@ else
 fi
 
 # docker composer project
-project="holo-web-${env}";
+project="wanderlinx-${env}";
 
 # action
 action=$2
