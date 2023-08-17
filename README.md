@@ -1,46 +1,96 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Task Management System
 
-## Available Scripts
+This project is a Task Management System, designed to help users manage their tasks effectively and efficiently. This document will guide you on setting up the project and getting it running on your local machine.
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+1.  **Node.js and npm**: If you're on Windows, you'll need to install Node.js which comes bundled with npm. Download the installer from the [official Node.js website](https://nodejs.org/).
+    
+2.  **Yarn (for macOS users)**: macOS users are recommended to use Yarn as the package manager. To install Yarn, make sure you have [Homebrew](https://brew.sh/) installed and then run:
+    
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+bashCopy code
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`brew install yarn` 
 
-### `npm test`
+3.  **Environment Variables**: This project requires specific environment variables to be set up. Please refer to the `sample.env` file in the root directory of the project to see which variables you'll need. Copy the content from `sample.env` to a new file named `.env` and replace placeholder values with the correct ones.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Repositories
 
-### `npm run build`
+-   **Frontend Repository**: [Your current repository]
+-   **Backend Repository**: [Task Management API](https://github.com/taliffsss/task-mngt-api.git)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  **Clone the repositories**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For the frontend (assuming you are already here):
 
-### `npm run eject`
+bashCopy code
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`git clone [frontend-repository-url]
+cd [frontend-repository-directory]` 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For the backend:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+bashCopy code
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`git clone https://github.com/taliffsss/task-mngt-api.git
+cd task-mngt-api` 
 
-## Learn More
+2.  **Install dependencies**:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you're on **Windows**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bashCopy code
+
+`npm install` 
+
+If you're on **macOS**:
+
+bashCopy code
+
+`yarn install` 
+
+3.  **Set up environment variables**:
+
+Ensure that you've set up the required environment variables as mentioned in the Prerequisites section above.
+
+4.  **Run the applications**:
+
+To start the servers and launch the Task Management System:
+
+If using **npm**:
+
+bashCopy code
+
+`npm start` 
+
+If using **yarn**:
+
+bashCopy code
+
+`yarn start` 
+
+Now you should be able to access the application on your local host.
+
+## Authentication
+
+The system includes authentication features:
+
+-   **Login**
+-   **Signup**
+-   **Logout**
+
+For testing purposes, use:
+
+**Email**: `test@test.com`  
+**Password**: `p@ss1234`
+
+## Features
+
+-   **Create Tasks**: Users can add new tasks specifying the details and deadlines.
+-   **Update Tasks**: Tasks can be updated with new information or marked as completed.
+-   **Delete Tasks**: Users can delete tasks that are no longer needed.
+-   **Filter and Search**: Search for tasks using specific keywords and filter them based on different criteria.
